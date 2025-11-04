@@ -35,11 +35,11 @@ F. Nommez la machine virtuelle : `SparkyLinux-VosInitiales`
 
 G. Creez un disque virtuel -> capcité : **20GB** 
 
-> remarque $$^1$$ : cocher **store virtual disk a single file**
+> Remarque 1 : Cocher **store virtual disk a single file**
 
 ![Virtual disk](/Images/VirtualDisk.jpg) 
 
-> remarque $$^2$$ : ci-dessous, la configuration de la VM 
+> Remarque 2 : Ci-dessous, la configuration de la VM 
 
 ![Virtual disk](/Images/VM_Config.jpg) 
 
@@ -134,13 +134,14 @@ Q12. Comme pour la question 6, « décryptez » le résultat affiché.
 
 ## Tips 
 
-> $$Tips^1$$ : sortir de la VM -> appuyer simultanément sur `Ctrl` et `Alt` 
+> Tip 1 : sortir de la VM -> appuyer simultanément sur `Ctrl` et `Alt` 
 
-> $$Tips^2$$ : arrêter la VM proprement -> commande : `shutdown`
+> Tip 2 :
+> Pour arrêter un Linux proprement : 	`shutdown`
+> Pour forcer l’arrêt d’un système :	`halt` ou `poweroff`
+> Seul un administrateur peut exécuter ces commandes !
 
-> $$Tips^3$$ : arrêter la VM pour cause de plantage -> commande : `halt` ou `poweroff`
+> Tip 3 : [commande vi avec ses options](https://www.linuxtricks.fr/wiki/guide-de-sur-vi-utilisation-de-vi)
 
-> $$Tips^4$$ : [commande vi avec ses options](https://www.linuxtricks.fr/wiki/guide-de-sur-vi-utilisation-de-vi)
-
-> $$Tips^5$$ : [éditer un fichier type markdown (.md)](https://ashki23.github.io/markdown-latex.html)
+> Tip 4 : [éditer un fichier type markdown (.md)](https://ashki23.github.io/markdown-latex.html)
 
