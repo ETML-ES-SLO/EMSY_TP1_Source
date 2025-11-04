@@ -89,7 +89,11 @@ Q6. Décrypter la ligne où se trouve le répertoire **home**
 > votre réponse ?!
 
 J. Créez un répertoire de travail nommé « EMSY_XXX-YYY ».
+
 Q7. Dans quel dossier allez-vous le placer (justifiez votre réponse) ?
+
+> votre réponse ?!
+
 Q8. Quelle commande allez-vous utiliser  ? 
 
 > votre commande ?! 
