@@ -137,8 +137,11 @@ Q12. Comme pour la question 6, « décryptez » le résultat affiché.
 > Tip 1 : sortir de la VM -> appuyer simultanément sur `Ctrl` et `Alt` 
 
 > Tip 2 :
+> 
 > Pour arrêter un Linux proprement : 	`shutdown`
+> 
 > Pour forcer l’arrêt d’un système :	`halt` ou `poweroff`
+> 
 > Seul un administrateur peut exécuter ces commandes !
 
 > Tip 3 : [commande vi avec ses options](https://www.linuxtricks.fr/wiki/guide-de-sur-vi-utilisation-de-vi)
