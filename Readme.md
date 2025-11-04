@@ -35,11 +35,11 @@ F. Nommez la machine virtuelle : `SparkyLinux-VosInitiales`
 
 G. Creez un disque virtuel -> capcité : **20GB** 
 
-> remarque$$^1$$ : cocher **store virtual disk a single file**
+> remarque $$^1$$ : cocher **store virtual disk a single file**
 
 ![Virtual disk](/Images/VirtualDisk.jpg) 
 
-> remarque$$^2$$ : ci-dessous, la configuration de la VM 
+> remarque $$^2$$ : ci-dessous, la configuration de la VM 
 
 ![Virtual disk](/Images/VM_Config.jpg) 
 
@@ -130,7 +130,7 @@ Q12. Comme pour la question 6, « décryptez » le résultat affiché.
 
 ## Installation sur le disque dur de la VM
 
-...A complèter...
+...A compléter...
 
 ## Tips 
 
