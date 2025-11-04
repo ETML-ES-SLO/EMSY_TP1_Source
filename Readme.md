@@ -13,7 +13,7 @@ Cette manipulation a pour but d'installer une distribution linux [Sparky Linux](
 - VMware Workstation Player - V17
 - Image disque (ISO) : sparkylinux-6.4-x86_64-minimalcli.iso
 
-## Utilisation de VMware et de l'image ISO linux 
+## Création d’une machine virtuelle 
 
 A. Lancez VMware Workstation Player (logiciel)  
 
@@ -124,10 +124,13 @@ Q11. Que signifie **sda** ?
 
 > votre réponse ?!
 
-Q12. Décrypter la réponse après avoir taper la commande `ls -l /dev/sda` -> voir résultat point 13.
+Q12. Comme pour la question 6, « décryptez » le résultat affiché.   
 
 > votre réponse ?!
 
+## Installation sur le disque dur de la VM
+
+...A complèter...
 
 ## Tips 
 
