@@ -20,7 +20,7 @@ Workstation Player, à l’aide d’une image disque (ISO).
 - VMware Workstation Player - V17
 - Image disque (ISO) : sparkylinux-6.4-x86_64-minimalcli.iso
 
-## Utilisation de VMware et de l'image ISO linux 
+## Création d’une machine virtuelle 
 
 **A.** Lancez VMware Workstation Player (logiciel)  
 
@@ -42,11 +42,11 @@ Workstation Player, à l’aide d’une image disque (ISO).
 
 **E.** Creez un disque virtuel -> capcité : **20GB** 
 
-> remarque$$^1$$ : cocher **store virtual disk a single file**
+> Remarque 1 : Cocher **store virtual disk a single file**
 
 ![Virtual disk](/Images/VirtualDisk.jpg) 
 
-> remarque$$^2$$ : ci-dessous, la configuration de la VM 
+> Remarque 2 : Ci-dessous, la configuration de la VM 
 
 ![Virtual disk](/Images/VM_Config.jpg) 
 
@@ -246,15 +246,18 @@ Q26. Que se passe-t-il ?
 
 
 
+...A compléter...
+
 ## Tips 
 
-> $$Tips^1$$ : sortir de la VM -> appuyer simultanément sur `Ctrl` et `Alt` 
+> Tip 1 : sortir de la VM -> appuyer simultanément sur `Ctrl` et `Alt` 
 
-> $$Tips^2$$ : arrêter la VM proprement -> commande : `shutdown`
+> Tip 2 :  
+> Pour arrêter un Linux proprement : 	`shutdown`  
+> Pour forcer l’arrêt d’un système :	`halt` ou `poweroff`  
+> Seul un administrateur peut exécuter ces commandes !
 
-> $$Tips^3$$ : arrêter la VM pour cause de plantage -> commande : `halt` ou `poweroff`
+> Tip 3 : [commande vi avec ses options](https://www.linuxtricks.fr/wiki/guide-de-sur-vi-utilisation-de-vi)
 
-> $$Tips^4$$ : [commande vi avec ses options](https://www.linuxtricks.fr/wiki/guide-de-sur-vi-utilisation-de-vi)
-
-> $$Tips^5$$ : [éditer un fichier type markdown (.md)](https://ashki23.github.io/markdown-latex.html)
+> Tip 4 : [éditer un fichier type markdown (.md)](https://ashki23.github.io/markdown-latex.html)
 
