@@ -1,12 +1,19 @@
-# TP1 - Installation Linux sur une VM - V0.1
+# TP1 - Installation Linux sur une VM - V0.2
 
 ## Groupe 
 
-- vos noms 
+1. Nicolas (NTN) 	- Noah (NRN)
+2. Noé (NAM)     	- Benjamin (BSC)
+3. Gabriel (GMO) 	- Yazan (YAD) 
+4. Geatan (GFR)	 	- Siméon (SAR)
+5. Guillaume (GFE) 	- Valentin (VBC)
+6. Nikola (NDC) 	- Thomas (TBT)  
+7. Tristan (TCK)	- Matéo (MCN)
 
 ## But 
 
-Cette manipulation a pour but d'installer une distribution linux [Sparky Linux](https://sparkylinux.org/) dans une machine virtuelle VMware Workstation Player, à l’aide d’une image disque (ISO).
+Cette manipulation a pour but d'installer une distribution linux [Sparky Linux](https://sparkylinux.org/) dans une machine virtuelle VMware 
+Workstation Player, à l’aide d’une image disque (ISO).
 
 ## Materiels à disposition 
 
@@ -15,25 +22,25 @@ Cette manipulation a pour but d'installer une distribution linux [Sparky Linux](
 
 ## Création d’une machine virtuelle 
 
-A. Lancez VMware Workstation Player (logiciel)  
+**A.** Lancez VMware Workstation Player (logiciel)  
 
-B. Sélectionnez **Create a New Virtual Machine** 
+**B.** Sélectionnez **Create a New Virtual Machine** 
 
-C. Placez le fichier `.iso` dans une repertoire connu : 
+**C-A.** Placez le fichier `.iso` dans une repertoire connu : 
 
 `C:\VosInitiales\VM\ISO`
 
-D. Indiquez le chemin d’accès de l’image iso comme indiqué sous l’image ci-dessous :
+**C-B.** Indiquez le chemin d’accès de l’image iso comme indiqué sous l’image ci-dessous :
 
 ![install image disk](/Images/Install_ISO.jpg) 
 
-E. Choisir un nom d'OS : `Linux - Debian 11.x` 
+**D-A.** Choisissez un nom d'OS : `Linux - Debian 11.x` 
 
 ![OS name choice](/Images/OS_Choice.jpg) 
 
-F. Nommez la machine virtuelle : `SparkyLinux-VosInitiales` 
+**D-B.** Nommez la machine virtuelle : `SparkyLinux-VosInitiales` 
 
-G. Creez un disque virtuel -> capcité : **20GB** 
+**E.** Creez un disque virtuel -> capcité : **20GB** 
 
 > Remarque 1 : Cocher **store virtual disk a single file**
 
@@ -43,11 +50,11 @@ G. Creez un disque virtuel -> capcité : **20GB**
 
 ![Virtual disk](/Images/VM_Config.jpg) 
 
-H. Lancez la machine virtuelle : **Play virtual machine** 
+**F.** Lancez la machine virtuelle : **Play virtual machine** 
 
 ## Lancement de l'image ISO (Linux - Live CD) 
 
-G. Lancement du live CD : 
+**G.** Lancement du live CD : 
 
 [Placer votre capture d'écran]() 
 
@@ -69,12 +76,11 @@ Q3. disposition du le clavier français ?
 
 > votre réponse ?!
 
+**H.** Déplacez-vous à la **racine du système** en utilisant la commande suivante : `cd` 
 
-H. Déplacez-vous à la **racine du système** en utilisant la commande suivante : `cd` 
+Q4. vore commande ?!
 
-> vore commande ?!
-
-I. Affichez le contenu de la racine avec la commande : `ls –l`	
+**I.** Affichez le contenu de la racine avec la commande : `ls –l`	
 
 ![Placer votre capture d'écran]() 
 
@@ -88,27 +94,22 @@ Q6. Décrypter la ligne où se trouve le répertoire **home**
 
 > votre réponse ?!
 
-J. Créez un répertoire de travail nommé « EMSY_XXX-YYY ».
+**J.** Créez un répertoire de travail nommé « EMSY_VosInitiales» 
 
-Q7. Dans quel dossier allez-vous le placer (justifiez votre réponse) ?
+Q7. dans quel dossier racine allez-vous le placer (justifiez votre réponse) 
 
-> votre réponse ?!
+> votre réponse ?! 
 
-Q8. Quelle commande allez-vous utiliser  ? 
-
-> votre commande ?! 
-
-Q7. Si vous créez un répertoire de travail (pour éditer/sauvegarder des fichiers), dans quelle **répertoire racine** vous vous placez ? 
-
-> votre réponse ?!
-
-
-K. Dans ce répertoire, créez un fichier texte que vous nommerez `TESTSLO_XXX_XXX` et éditez celui en écrivant un texte, exemple : "TP linux by XXX et XXX".
-	Utiliser la commande `vi`
+Q8. Quelle commande allez-vous utiliser pour faire ceci ?  
 
 > votre commande ?! 
 
-Q9. dans le répertoire `/home`, pouvez-vous éditez un fichier uniquement avec la commande `vi` 
+**K.** Dans ce répertoire, créez un fichier texte que vous nommerez `TESTSLO_XXX_XXX` et éditez celui en écrivant un texte, exemple : "TP linux by XXX et XXX".
+	   Utiliser la commande `vi`
+
+> votre commande ?! 
+
+Q9. Pouvez-vous éditez un fichier uniquement avec la commande `vi` 
 
 > votre réponse ?!
 
@@ -116,7 +117,7 @@ Q10. Si vous éteignez la machine virtuelle et que vous la rallumez, est-ce que 
 
 > votre réponse ?!
 
-L. Tapez la commande `ls -l /dev/sda` 
+**L.** Tapez la commande `ls -l /dev/sda` 
 
 ![Placer votre capture d'écran]() 
 
@@ -124,11 +125,126 @@ Q11. Que signifie **sda** ?
 
 > votre réponse ?!
 
-Q12. Comme pour la question 6, « décryptez » le résultat affiché.   
+Q12. Quelle différence y a-t-il entre le répertoire de la question Q6 et celui du point L (justifiez votre réponse) ?
 
 > votre réponse ?!
 
-## Installation sur le disque dur de la VM
+## Installation de SparkyLinux sur la VM
+
+**M.** Installez SparkyLinux
+
+![Placer vos captures d'écrans de l'installation]()
+
+Q13. Quelle est la taille de disque minimum recommandée pour installer la distribution Sparky en mode cli 
+
+> votre réponse ?!
+
+Q14. A quoi sert la partition swap ? Est-ce que ce principe existe-t-il sur les OS Microsoft Windows ? 
+
+> votre réponse ?!
+
+Q15. Quel format pourriez-vous utiliser pour la 3ème partition afin qu’elle soit également accessible depuis un OS Microsoft ? 
+
+> votre réponse ?!
+
+Q16. Durant l’installation, on vous demande deux noms d’utilisateur. A quoi correspondent-ils ? 
+
+> votre réponse ?!
+
+**N.** Une fois l’installation de Linux terminée, prenez une capture d’écran du démarrage de votre système (GRUB)
+
+![Placer votre capture d'écran]() 
+
+**O.** Trouvez la ou les lignes de commande permettant de changer le clavier et procédez à la configuiration 
+
+> votre commande ?! 
+
+![Placer votre capture d'écran]() 
+
+**P.** Tapez la commande : `nano -version`
+
+![Placer votre capture d'écran]() 
+
+Q17. A quoi sert `nano` ? 
+
+> votre réponse ?!
+
+**Q.** Testez si l’application `git` est installée sur votre distribution, si ce n’est pas le cas installez un client git. 
+
+Q18. Comment savoir si `git` est déjà installé ? 
+
+> votre réponse ?!
+
+> votre commande ?! 
+
+Q19. Si le client `git` n'est pas installé, quelle(s) commande(s) utilisez-vous pour l’installer ? 
+
+> votre commande ?! 
+
+Q20. Que veut dire `apt` ? 
+
+> votre réponse ?!
+
+Q21. Est-ce que cette commande (`apt`) peut être utilisée sur toutes les distributions Linux (justifiez votre réponse)? 
+
+> votre réponse ?!
+
+**R.** Créez un sous-répertoire « EMSY_TP1_XXX-YYY » dans le répertoire de votre utilisateur. 
+       
+**Attention** : Ici on veut que l’utilisateur (vous) ait les droits de lecture, d’écriture et d’exécution.
+
+> votre commande ?! 
+
+Q22. Quel est le répertoire utilisateur ?  
+
+> votre réponse ?!
+
+Q23. Quelles sont les commandes pour changer les droits d'utilisateurs (lecture - écriture - execution) ?  
+
+> votre commande ?! 
+
+**S.** Dans ce répertoire, tapez la commande : `git clone https://github.com/votreDepot/EMSY_TP1_Source`
+
+***Remarque*** : Il faut au préalable que vous ayez mis en place à cette adresse un fork du dépôt fourni lors de ce TP.
+
+Q24. Qu’observez-vous dans ce répertoire ?
+
+![Placer votre capture d'écran]()
+
+**T.** Editez le fichier source `.c` avec l’éditeur de texte « nano ». -> Réalisez un petit programme en C (par exemple de type « Hello world »).
+
+![Placer votre capture d'écran]()
+
+**U.**	Vérifiez si le compilateur `gcc` est bien installé. Notez la version du logiciel
+
+> votre réponse ?!
+
+![Placer votre capture d'écran]()
+
+**U-A.** Tapez les commandes suivantes :
+```Shell 
+gcc -Wall -o fichier.o -c fichier.c 
+gcc -o fichier fichier.o 
+```
+Remarque : « fichier » est à remplacer par le nom de votre choix
+
+![Placer votre capture d'écran]()
+
+Q25. Quels sont les fichiers qui ont été générés 
+
+> votre réponse ?!
+
+![Placer votre capture d'écran]()
+
+**V.** Entrez la commande suivante : `./fichier`
+
+![Placer votre capture d'écran]()
+
+Q26. Que se passe-t-il ?
+
+> votre réponse ?!
+
+
 
 ...A compléter...
 
