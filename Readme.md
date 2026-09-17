@@ -1,6 +1,6 @@
 # TP1 - Installation Linux sur une VM - V0.4
 
-## Groupe VCB + BSC2
+## Groupe VCB + BSC
 
 1. Yazan (YAD) 		- Noé (NAM) 
 2. Siméon (SAR) 	- Gaëtan (GFR)
@@ -67,7 +67,7 @@ Shell Linux :
 
 Q1. disposition du clavier américain ?
 
-> La clavier américain est un qwerty
+> Le clavier américain est un qwerty
 
 Q2. disposition du clavier suisse-romand ?
 
