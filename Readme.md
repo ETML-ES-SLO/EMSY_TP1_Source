@@ -67,7 +67,7 @@ Shell Linux :
 
 Q1. disposition du clavier américain ?
 
-> votre réponse ?!
+> La clavier américain est un qwerty
 
 Q2. disposition du clavier suisse-romand ?
 
