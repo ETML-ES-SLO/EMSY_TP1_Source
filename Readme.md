@@ -1,6 +1,6 @@
 # TP1 - Installation Linux sur une VM - V0.4
 
-## Groupe 
+## Groupe VCB + BSC
 
 1. Yazan (YAD) 		- Noé (NAM) 
 2. Siméon (SAR) 	- Gaëtan (GFR)
@@ -54,7 +54,8 @@ Workstation Player, à l’aide d’une image disque (ISO).
 
 ## Lancement de l'image ISO (Linux - Live CD) 
 
-**G.** Lancement du live CD : 
+<img width="800" height="644" alt="Capture d&#39;écran 2026-09-17 153731" src="https://github.com/user-attachments/assets/c165d9a0-aaf2-40f2-934d-188eade09bde" />
+
 
 [Placer votre capture d'écran]() 
 
@@ -66,19 +67,20 @@ Shell Linux :
 
 Q1. disposition du clavier américain ?
 
-> votre réponse ?!
+> Le clavier américain est un qwerty
 
 Q2. disposition du clavier suisse-romand ?
 
-> votre réponse ?!
+> qwertz
 
 Q3. disposition du le clavier français ? 
 
-> votre réponse ?!
+> azerty
 
 **H.** Déplacez-vous à la **racine du système** en utilisant la commande suivante : `cd` 
 
 Q4. vore commande ?!
+cd /
 
 **I.** Affichez le contenu de la racine avec la commande : `ls –l`	
 
