@@ -20,7 +20,7 @@ Workstation Player, à l'aide d'une image disque (ISO).
 - VMware Workstation Player - V17
 - Image disque (ISO) : sparkylinux-6.4-x86_64-minimalcli.iso
 
-> Remarque : Expliquer plus en details après, la version utilisée pour ce TP est **SparkyLinux 8.4 MinimalCLI. Ceci est du au faite que j'ai mis a jour le system dans le live CD avant installation.
+> Remarque : Expliquer plus en details au point M, la version utilisée pour ce TP est **SparkyLinux 8.4 MinimalCLI et pas 6.4.
 
 ## Création d'une machine virtuelle 
 
@@ -146,13 +146,13 @@ Q6. Décryptez la ligne où se trouve le répertoire *home*
 
 | Champ | Valeur | Description |
 |-------|--------|-------------|
-| Type | `d` | Répertoire (`d` = *directory*). Un fichier normal aurait `-`, un lien symbolique `l`. |
-| Droits du propriétaire (*user*) | `rwx` | Lecture (lister le contenu), écriture (créer / supprimer des fichiers dedans), exécution (entrer dans le dossier avec `cd`) |
+| Type | `d` | Répertoire (`d` = *directory*). |
+| Droits du propriétaire (*user*) | `rwx` | le propriétaire peut lire, écrire et exécuter |
 | Droits du groupe (*group*) | `r-x` | Lecture + entrer dans le dossier, **pas d'écriture** |
 | Droits des autres (*others*) | `r-x` | Lecture + entrer dans le dossier, **pas d'écriture** |
-| Liens physiques | `1` | Nombre de liens. Normalement un répertoire en a 2 + 1 par sous-dossier ; le live CD utilise un système de fichiers spécial (overlay) qui affiche 1 pour les dossiers fusionnés. |
-| Propriétaire | `root` | Utilisateur propriétaire (root = administrateur, UID 0) |
-| Groupe | `root` | Groupe propriétaire (GID 0) |
+| Liens physiques | `1` | Nombre de liens physique |
+| Propriétaire | `root` | Utilisateur propriétaire (root = administrateur) |
+| Groupe | `root` | Groupe propriétaire du dossier |
 | Taille | `60` | Taille en octets du répertoire lui-même, **pas** de son contenu |
 | Date | `Sep 17 13:49` | Date et heure de la dernière modification. L'année n'est pas affichée car la date a moins de 6 mois. |
 | Nom | `home` | Le répertoire `/home` |
@@ -207,14 +207,14 @@ Suite à mes recherches, j'ai trouvé que `vi` fait partie des commandes défini
 
 Q9. Pouvez-vous éditer un fichier uniquement avec la commande `vi` ?
 
-> **NON.** 
-> `sudo` était nécessaire parce que le dossier `EMSY_TCK_NTN` appartient à root ; sans `sudo`, `vi` refuse d'enregistrer (`E212: Can't open file for writing`).
->
-> Remarque : avec le clavier américain sur un clavier suisse utuliser `vi` devient assez complexe.
+> Oui, vi permet d’ouvrir ou créer un fichier puis de le modifier. Par contre, comme le dossier appartient à root, il faut utiliser sudo vi pour pouvoir enregistrer.; sans `sudo`, `vi` refuse d'enregistrer (`E212: Can't open file for writing`).
+
+
+> Remarque : avec le clavier américain sur un clavier suisse utuliser `vi` devient complexe à naviger.
 
 Q10. Si vous éteignez la machine virtuelle et que vous la rallumez, est-ce que le répertoire créé ci-dessus existe toujours (justifiez votre réponse) ? 
 
-> **Non.** Le live CD fonctionne entièrement en **RAM** : le système de l'ISO est en lecture seule et toutes les modifications (comme notre dossier) sont écrites dans un endroit temporaire (RAM). Rien n'est écrit sur le disque virtuel tant que Sparky n'est pas installé. À l'extinction, la RAM est vidée et le dossier disparaît.
+> **Non.** Le live CD fonctionne dans la **RAM** : le système de l'ISO est en lecture seule et toutes les modifications (comme notre dossier) sont écrites dans la RAM, un endroit temporaire. Rien n'est écrit sur le disque virtuel tant que Sparky n'est pas installé. À l'extinction, la RAM est "perdu" et donc le dossier aussi.
 
 **L.** Tapez la commande `ls -l /dev/sda` 
 
@@ -241,16 +241,14 @@ Q12. Quelle différence y a-t-il entre le répertoire de la question Q6 et celui
 
 ## Installation de SparkyLinux sur la VM
 
-> **Remarque importante : j'ai par habitude et par acident j'ai mis à jour le live CD avant l'installation**
-
-> je l'ai fais avec :
-``` shell
-sudo apt update
-sudo apt upgrade -y
-```
-
 **M.** Installez SparkyLinux
 
+### Remarque importante : avant de lancer l'installation, j'ai par habitude mis à jour le système depuis le Live CD avec :
+>sudo apt update
+
+>sudo apt upgrade -y
+
+cela a changer quelques trucs pour l'installation. J'ai donc installé SparkyLinux 8.4, alors que l'image de départ du TP était basée sur SparkyLinux 6.4. C'est pour cette raison que certains écrans et certaines versions de logiciels sont différents de ceux de mes camarades.
 
 1. Installation depuis le live CD avec l'installateur en mode texte : `sudo sparky-installer`
 
@@ -326,7 +324,7 @@ Q16. Durant l'installation, on vous demande deux noms d'utilisateur. À quoi cor
 
 > Menu de GRUB 2.12 (Debian 13) au démarrage : l'entrée *Sparky GNU/Linux* démarre le système, *Advanced options* permet de choisir un autre noyau ou le mode de dépannage (*recovery*).
 >
-> **(live CD mis à jour)** La version affichée en haut (`2.12-9+deb13u2`) est celle du paquet GRUB après la mise à jour (`+deb13u2` = 2ème mise à jour de ce paquet dans Debian 13). De même, le noyau Linux installé est plus récent que celui du live CD : `uname -r` affiche `6.12.111+deb13-amd64`, alors que le live CD utilisait `6.12.101` (capture du point G).
+> **(Live CD mis à jour)** La version affichée de GRUB est plus récente car j'ai mis à jour le système avant l'installation. Mon système final est sous SparkyLinux 8.4, alors que l'image utilisée à l'origine pour le TP était en SparkyLinux 6.4. (capture du point G).
 
 <details>
 <summary>Version du Noyau</summary>
@@ -396,7 +394,7 @@ sudo apt install git
 
 Q20. Que veut dire `apt` ? 
 
-> **APT** = *Advanced Package Tool*. C'est le gestionnaire de paquets de Debian : il télécharge les paquets depuis les dépôts, gère les dépendances, mettre à jour (`apt upgrade` ou `apt update`) et supprimer (`apt remove`) des logiciels.
+> **APT** = *Advanced Package Tool*. C'est le gestionnaire de paquets de Debian : il télécharge les paquets depuis les dépôts, gère les dépendances, met à jour (`apt upgrade` pour les mise à jours ou `apt update` pour mettre a jours la liste des paquets disponible) et supprimer (`apt remove`) des logiciels.
 
 Q21. Est-ce que cette commande (`apt`) peut être utilisée sur toutes les distributions Linux (justifiez votre réponse) ? 
 
@@ -431,10 +429,6 @@ Q23. Quelles sont les commandes pour changer les droits d'utilisateurs (lecture 
 > - `chmod` (*change mode*) : change les droits
 > - `chown` (*change owner*) : change le propriétaire (et le groupe : `chown user:groupe fichier`)
 > - `chgrp` (*change group*) : change le groupe
->
-> `chmod` s'utilise de deux façons :
-> - **symbolique** : `u` (user), `g` (group), `o` (others), `a` (all) avec `+` (ajouter), `-` (enlever),
-
 
 **S.** Dans ce répertoire, tapez la commande : `git clone https://github.com/votreDepot/EMSY_TP1_Source`
 
