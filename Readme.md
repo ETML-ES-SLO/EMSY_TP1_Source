@@ -1,6 +1,6 @@
 # TP1 - Installation Linux sur une VM - V0.4
 
-## Groupe 
+## Groupe VCB + BSC
 
 1. Yazan (YAD) 		- Noé (NAM) 
 2. Siméon (SAR) 	- Gaëtan (GFR)
@@ -54,7 +54,8 @@ Workstation Player, à l’aide d’une image disque (ISO).
 
 ## Lancement de l'image ISO (Linux - Live CD) 
 
-**G.** Lancement du live CD : 
+<img width="800" height="644" alt="Capture d&#39;écran 2026-09-17 153731" src="https://github.com/user-attachments/assets/c165d9a0-aaf2-40f2-934d-188eade09bde" />
+
 
 [Placer votre capture d'écran]() 
 
@@ -66,142 +67,188 @@ Shell Linux :
 
 Q1. disposition du clavier américain ?
 
-> votre réponse ?!
+> Le clavier américain est un qwerty
 
 Q2. disposition du clavier suisse-romand ?
 
-> votre réponse ?!
+> qwertz
 
 Q3. disposition du le clavier français ? 
 
-> votre réponse ?!
+> azerty
 
 **H.** Déplacez-vous à la **racine du système** en utilisant la commande suivante : `cd` 
 
 Q4. vore commande ?!
+cd /
 
 **I.** Affichez le contenu de la racine avec la commande : `ls –l`	
 
-![Placer votre capture d'écran]() 
+![Virtual disk](/Images/Q5_VBC.jpg)
 
 Q5. Que signifie l'option `-l` avec la commande `ls` 
 
 > votre réponse ?!
+>la commande ls permet d'afficher tout le contenu d'un repertoire et le -l permet d'avoir les information sous leur forme long(je suppose avec toute les infos possible)
 
 Q6. Décrypter la ligne où se trouve le répertoire **home**    
 
 [Placer votre capture d'écran]()
 
+![Virtual disk](/Images/Q6_VBC.jpg)  
+la premiere lettre dit le le "file type" dans se cas la "d" veut dire directory  
+les 9 prochain caractaire disent les permissions. ces permission sont divisé par groupe de 3 caravtaire. les 3 premier pour le "owner", les trois d'après " groupe" et les trois dernière "other"  
+	les trois permission possible sont:  
+		r = read  
+		w = write   
+		x = execute  
+le chiffre après donne le nombre de hard links la 1  
+après le owner la root   
+après le owning groupe la root  
+après le file size la 60 octet  
+après la derniere modification la sep 24 13:14  
 > votre réponse ?!
 
 **J.** Créez un répertoire de travail nommé « EMSY_VosInitiales» 
+écrire sudo avant si pas de permission
+ Commande = mkdir nom_dossier  -X = rien crée le dossier, -v comfirme la creation du dossier -p crée les dossier entre si il n'existe pas (ex -p parent/enfant/xxx crée parent et enfant si il nexiste pas deja
 
 Q7. dans quel dossier racine allez-vous le placer (justifiez votre réponse) 
-
-> votre réponse ?! 
+> votre réponse ?!  
+ dans le fichier home car c'est le fichier des utilisateur.  
 
 Q8. Quelle commande allez-vous utiliser pour faire ceci ?  
-
-> votre commande ?! 
+> votre commande ?!
+>  sudo mkdir -p /home/EMSY_VBC    
 
 **K.** Dans ce répertoire, créez un fichier texte que vous nommerez `TESTSLO_XXX_XXX` et éditez celui en écrivant un texte, exemple : "TP linux by XXX et XXX".
 	   Utiliser la commande `vi`
-
-> votre commande ?! 
+> votre commande ?!
+>  sudo vi TESTSLO_VBC  
 
 Q9. Pouvez-vous éditez un fichier uniquement avec la commande `vi` 
-
-> votre réponse ?!
+> votre réponse ?!  
+ non il faut mettre sudo devant sinon on ne peux pas crée le fichier  
 
 Q10. Si vous éteignez la machine virtuelle et que vous la rallumez, est-ce que le répertoire créé ci-dessus existe toujours (justifiez votre réponse) ? 
-
 > votre réponse ?!
+>  non car la mémoire utilisé par ma machine virtuelle est un live cd. Ce qui veux dire que la la mémoire est dans la RAM donc quand on l'eteint elle oublie tout.  
+
 
 **L.** Tapez la commande `ls -l /dev/sda` 
-
 ![Placer votre capture d'écran]() 
-
-Q11. Que signifie **sda** ? 
-
+ 
+![Virtual disk](/Images/QL_VBC.jpg)  
+Q11. Que signifie **sda** ?  
 > votre réponse ?!
+>  sda  désigne le premier disque de stockage détecté par le système  
+plus précisément sd parle de trouvé un disque et a de prendre le premier (exemple si je met sdb ca prendra le deuxième disque trouvé)  
+
 
 Q12. Quelle différence y a-t-il entre le répertoire de la question Q6 et celui du point L (justifiez votre réponse) ?
-
 > votre réponse ?!
+>  /dev/sda est un chemin d'accés qui mène a l'adresse du premier disque dure trouvé alors que /home est un répertoire ou l'on peut crée des fichier.  
 
 ## Installation de SparkyLinux sur la VM
 
 **M.** Installez SparkyLinux
 
-![Placer vos captures d'écrans de l'installation]()
+![Placer vos captures d'écrans de l'installation]()  
+ 
+![Virtual disk](/Images/InstalationLinux1_VBC.jpg)  
+![Virtual disk](/Images/InstalationLinux2_VBC.jpg)  
+![Virtual disk](/Images/InstalationLinux3_VBC.jpg)  
+![Virtual disk](/Images/InstalationLinux4_VBC.jpg)  
 
 Q13. Quelle est la taille de disque minimum recommandée pour installer la distribution Sparky en mode cli 
 
-> votre réponse ?!
+> votre réponse ?!  
+ 2 Go  
 
 Q14. A quoi sert la partition swap ? Est-ce que ce principe existe-t-il sur les OS Microsoft Windows ? 
-
-> votre réponse ?!
+> votre réponse ?!  
+ Une partition swap est un disque dur qui peux aidé la RAM (meme si ca sera plus lent)si le PC demande plus de RAM.  
+Sur Windows les partition swap n'existe pas vraiment mais des subsitution a celle si existe.  
 
 Q15. Quel format pourriez-vous utiliser pour la 3ème partition afin qu’elle soit également accessible depuis un OS Microsoft ? 
-
-> votre réponse ?!
+> votre réponse ?!  
+ Une partition de format NTFS peux etre utilisé sur windows et linux.  
 
 Q16. Durant l’installation, on vous demande deux noms d’utilisateur. A quoi correspondent-ils ? 
-
 > votre réponse ?!
+> Le premier est le nom de l'ost et le deuxieme est un nom de compte utilisateur.  
 
 **N.** Une fois l’installation de Linux terminée, prenez une capture d’écran du démarrage de votre système (GRUB)
-
-![Placer votre capture d'écran]() 
-
+![Placer votre capture d'écran]()  
+  
+![Virtual disk](/Images/QN_VBC.jpg)  
+ 
 **O.** Trouvez la ou les lignes de commande permettant de changer le clavier et procédez à la configuiration 
 
-> votre commande ?! 
+> votre commande ?!
+> sudo dpkg-reconfigure keyboard-configuration  
 
-![Placer votre capture d'écran]() 
+![Placer votre capture d'écran]()  
+![Virtual disk](/Images/QO_VBC.jpg)  
 
 **P.** Tapez la commande : `nano -version`
-
 ![Placer votre capture d'écran]() 
-
+ 
+![Virtual disk](/Images/QP_VBC.jpg)  
+ 
 Q17. A quoi sert `nano` ? 
-
-> votre réponse ?!
+> votre réponse ?!  
+ nano est une application qui sert à édité et crée des fichier texte.  GIT
 
 **Q.** Testez si l’application `git` est installée sur votre distribution, si ce n’est pas le cas installez un client git. 
 
 Q18. Comment savoir si `git` est déjà installé ? 
-
-> votre réponse ?!
-
-> votre commande ?! 
+> votre réponse ?!  
+ la commande which nom_de_l'app permet de savoir le chemin d'accés de l'app.  
+> votre commande ?!  
+ which git   
 
 Q19. Si le client `git` n'est pas installé, quelle(s) commande(s) utilisez-vous pour l’installer ? 
 
-> votre commande ?! 
+> votre commande ?!  
+sudo mv /etc/apt/sources.list.d/sparky-unstable.list /etc/apt/sources.list.d/sparky-unstable.list.disabled  
+sudo nano /etc/apt/sources.list puis ctrl+o et ctrl+x  
+sudo apt install git  
+il faut faire tout ca car des protections ont été mise sur notre version sparkylinux. Car le logiciel n'est plus mit a jour.  
+Sinon juste la derniere commande aurais suffis.  
 
-Q20. Que veut dire `apt` ? 
-
-> votre réponse ?!
+Q20. Que veut dire `apt` ?  
+> votre réponse ?!  
+ APT veut dire Advanced Package Tool. C'est le gestionnaire de paquets par défaut chez Debian.  
 
 Q21. Est-ce que cette commande (`apt`) peut être utilisée sur toutes les distributions Linux (justifiez votre réponse)? 
-
-> votre réponse ?!
+> votre réponse ?!  
+non car comme dit dans la question de avant apt est utilisé par defaut sur Debian. EX sur Fedora on utilise dnf.  
 
 **R.** Créez un sous-répertoire « EMSY_TP1_XXX-YYY » dans le répertoire de votre utilisateur. 
        
 **Attention** : Ici on veut que l’utilisateur (vous) ait les droits de lecture, d’écriture et d’exécution.
-
-> votre commande ?! 
+> votre commande ?!  
+ mkdir -m 700 EMSY_TP1_VBC-2026  
 
 Q22. Quel est le répertoire utilisateur ?  
 
-> votre réponse ?!
+> votre réponse ?!  
+le répertoire du deuxieme compte que on a crée qui n'est pas l'administrateur pour moi valentin22.  
 
 Q23. Quelles sont les commandes pour changer les droits d'utilisateurs (lecture - écriture - execution) ?  
 
-> votre commande ?! 
+> votre commande ?!  
+ chmode XYZ nom_fichier  
+X : droits du propriétaire  
+Y : droits du groupe  
+Z : droits des autres utilisateurs  
+7	rwx  
+6	rw-  
+5	r-x  
+4	r--  
+0	---  
+d'où le 700 pour X=rwx et Y/Z=---  
 
 **S.** Dans ce répertoire, tapez la commande : `git clone https://github.com/votreDepot/EMSY_TP1_Source`
 
@@ -209,17 +256,19 @@ Q23. Quelles sont les commandes pour changer les droits d'utilisateurs (lecture 
 
 Q24. Qu’observez-vous dans ce répertoire ?
 
-![Placer votre capture d'écran]()
+![Placer votre capture d'écran]()  
+ je vois tout mes dossier dans le quelle je travaille depuis le debut pour se TP.  
+![Virtual disk](/Images/Q24_VBC.jpg)  
 
 **T.** Editez le fichier source `.c` avec l’éditeur de texte « nano ». -> Réalisez un petit programme en C (par exemple de type « Hello world »).
-
-![Placer votre capture d'écran]()
+![Placer votre capture d'écran]()  
+ ![Virtual disk](/Images/QT_VBC.jpg)  
 
 **U.**	Vérifiez si le compilateur `gcc` est bien installé. Notez la version du logiciel
-
-> votre réponse ?!
-
-![Placer votre capture d'écran]()
+> votre réponse ?!  
+ oui gcc est pas installé.  
+![Placer votre capture d'écran]()  
+ ![Virtual disk](/Images/QU_VBC.jpg)  
 
 **U-A.** Tapez les commandes suivantes :
 ```Shell 
@@ -227,22 +276,23 @@ gcc -Wall -o fichier.o -c fichier.c
 gcc -o fichier fichier.o 
 ```
 Remarque : « fichier » est à remplacer par le nom de votre choix
-
-![Placer votre capture d'écran]()
+![Placer votre capture d'écran]()  
+ ![Virtual disk](/Images/QU-A_VBC.jpg) 
 
 Q25. Quels sont les fichiers qui ont été générés 
+> votre réponse ?!  
+ le fichier mainVBC et mainVBC.o
 
-> votre réponse ?!
-
-![Placer votre capture d'écran]()
+![Placer votre capture d'écran]()  
+ ![Virtual disk](/Images/QU-A_VBC.jpg) 
 
 **V.** Entrez la commande suivante : `./fichier`
+![Placer votre capture d'écran]()  
+ ![Virtual disk](/Images/QV_VBC.jpg)  
 
-![Placer votre capture d'écran]()
-
-Q26. Que se passe-t-il ?
-
-> votre réponse ?!
+Q26. Que se passe-t-il ?  
+> votre réponse ?!  
+ Ca a lancer mon code quand j'avais crée avant. Où j'ai ecrit Hello world. Problème vu que je n'avais pas mit de retour a la ligne il est ecrit sur la meme ligne que les info dans l'emplacement ou je suis.
 
 
 
